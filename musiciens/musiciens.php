@@ -26,7 +26,7 @@
 
 	// Formulaire
 	?>
-	<form action="musiciens.php" method="post" class="FORM">
+	<form action="musiciens.php" method="post" class="smart-green">
 		<h1>Formulaire Musiciens
 			<span>Merci de remplir le formulaire d'ajout d'instruments.</span>
 		</h1>
@@ -52,20 +52,46 @@
 
 	?>
 
-	<p><label><span>&nbsp;</span><input type="submit" class="button" value="Créer" /></p>
+		<p>
+			<label><span>&nbsp;</span>
+			<input type="submit" class="button" value="Créer" />
+		</p>
 	</form>
 
 	<?php
-		echo '<p>Entrées existantes :</p>';
+
+
+	// Liste des entrées existantes
+		// Requete
 		$liste_musiciens_instruments = $bdd->query('SELECT i.nom AS instru, p.prenom, p.nom
-			FROM personnes AS p, instruments AS i, personnes_instruments AS p_i 
-			WHERE p_i.id_instruments = i.id AND p_i.id_personnes = p.id') or die(mysql_error());
-		while ( $resultat = $liste_musiciens_instruments->fetch() ) 
-		{
-			echo '<p>' . $resultat['prenom'] . ' : ' . $resultat['instru'] . '</p>';
-		}
-		$liste_musiciens_instruments->closeCursor();
+		FROM personnes AS p, instruments AS i, personnes_instruments AS p_i 
+		WHERE p_i.id_instruments = i.id AND p_i.id_personnes = p.id') or die(mysql_error());
 	?>
+
+	<table>
+
+		<caption>Liste des musiciens et instruments</caption>
+
+		<thead> <!-- Entête tableau -->
+			<tr>
+				<th>Musicien</th>
+				<th>Instrument</th>
+				<th>Actions</th>
+			</tr>
+
+		<tbody>
+			<tr>
+			<?php
+				while ( $resultat = $liste_musiciens_instruments->fetch() ){
+					echo "<td>" . $resultat['prenom'] . "</td>\n" . 
+						"<td>" . $resultat['instru'] . "</td>\n" . 
+						"<td>" . "test" . "</td>\n";
+				}
+				$liste_musiciens_instruments->closeCursor();
+			?>
+			</tr>
+		</tbody>
+	</table>
 
 	</body>
 
