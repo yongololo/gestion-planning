@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Déclaration des musiciens</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
 	</head>
 	
 	<body>
@@ -12,6 +13,7 @@
 	if (($_POST['musicien']) AND ($_POST['instrument'])){
 		echo "<p>POST musicien : " . $_POST['musicien'] . "</p>";
 		echo "<p>POST instrument : " . $_POST['instrument'] . "</p>";
+		echo "<br /><hr />";
 		//INSERT INTO `musique`.`personnes_instruments` (`id_personnes`, `id_instruments`) VALUES ('2', '2');
 	}	
 
@@ -24,41 +26,45 @@
 
 	// Formulaire
 	?>
-	<form action="musiciens.php" method="post">
+	<form action="musiciens.php" method="post" class="FORM">
+		<h1>Formulaire Musiciens
+			<span>Merci de remplir le formulaire d'ajout d'instruments.</span>
+		</h1>
 
 	<?php
 	// Liste déroulante musiciens
-	echo "<p><label>Musiciens : <select name='musicien'>";
+	echo "<label><span>Musiciens : </span><select name='musicien'>";
 	while ( $musicien = $liste_musiciens->fetch()) 
 	{
 		echo '<option value=\'' . $musicien['id'] . '\'>' . htmlspecialchars($musicien['prenom']) . ' ' . htmlspecialchars($musicien['nom']) . '</option>';
 	}
-	echo "</select></label></p>";
+	echo "</select></label>";
 	$liste_musiciens->closeCursor();
 
 	// Liste déroulante instruments
-	echo "<p><label>Instruments : <select name='instrument'>";
+	echo "<label><span>Instruments : </span><select name='instrument'>";
 	while ( $instrument = $liste_instruments->fetch())
 	{
 		echo '<option value=\'' . $instrument['id'] . '\'>' . htmlspecialchars(utf8_encode($instrument['nom'])) . '</option>';
 	}
-	echo "</select></label></p>";
+	echo "</select></label>";
 	$liste_instruments->closeCursor();	
 
 	?>
 
-	<p><input type="submit" /></p>
+	<p><label><span>&nbsp;</span><input type="submit" class="button" value="Créer" /></p>
 	</form>
 
 	<?php
-		$liste_musiciens_instruments = $bdd->query('SELECT i.nom, p.prenom\
-			FROM personnes AS p, instruments AS i, personnes_instruments AS p_i\
+		echo '<p>Entrées existantes :</p>';
+		$liste_musiciens_instruments = $bdd->query('SELECT i.nom AS instru, p.prenom, p.nom
+			FROM personnes AS p, instruments AS i, personnes_instruments AS p_i 
 			WHERE p_i.id_instruments = i.id AND p_i.id_personnes = p.id') or die(mysql_error());
-		/*
-		SELECT i.nom, p.prenom 
-		FROM personnes AS p, instruments AS i, personnes_instruments AS p_i
-		WHERE p_i.id_instruments = i.id AND p_i.id_personnes = p.id
-		*/
+		while ( $resultat = $liste_musiciens_instruments->fetch() ) 
+		{
+			echo '<p>' . $resultat['prenom'] . ' : ' . $resultat['instru'] . '</p>';
+		}
+		$liste_musiciens_instruments->closeCursor();
 	?>
 
 	</body>
