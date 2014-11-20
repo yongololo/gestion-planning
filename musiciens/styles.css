@@ -10,10 +10,11 @@
     padding: 30px 30px 20px 30px;
     font: 12px Arial, Helvetica, sans-serif;
     color: #666;
+    box-shadow: 10px 10px 5px #888888;
     border-radius: 5px;
     -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-}
+    -moz-border-radius: 5px;}
+
 .smart-green h1 {
     font: 24px "Trebuchet MS", Arial, Helvetica, sans-serif;
     padding: 20px 0px 20px 40px;
@@ -25,24 +26,23 @@
     border-radius: 5px 5px 0px 0px;
     -webkit-border-radius: 5px 5px 0px 0px;
     -moz-border-radius: 5px 5px 0px 0px;
-    border-bottom:1px solid #89AF4C;
+    border-bottom:1px solid #89AF4C;}
 
-}
 .smart-green h1>span {
     display: block;
     font-size: 11px;
-    color: #FFF;
-}
+    color: #FFF;}
 
 .smart-green label {
     display: block;
-    margin: 0px 0px 5px;
-}
+    margin: 0px 0px 5px;}
+
 .smart-green label>span {
     float: left;
     margin-top: 10px;
     color: #5E5E5E;
 }
+
 .smart-green input[type="text"], .smart-green input[type="email"], .smart-green textarea, .smart-green select {
     color: #555;
     height: 30px;
@@ -57,10 +57,12 @@
     box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
     font: normal 14px/14px Arial, Helvetica, sans-serif;
 }
+
 .smart-green textarea{
     height:100px;
     padding-top: 10px;
 }
+
 .smart-green select {
     background: url('down-arrow.png') no-repeat right, -moz-linear-gradient(top, #FBFBFB 0%, #E9E9E9 100%);
     background: url('down-arrow.png') no-repeat right, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FBFBFB), color-stop(100%,#E9E9E9));
@@ -72,6 +74,7 @@
     width:100%;
     height:30px;
 }
+
 .smart-green .button {
     background-color: #9DC45F;
     border-radius: 5px;
@@ -82,16 +85,110 @@
     color: #FFF;
     text-shadow: 1px 1px 1px #949494;
 }
+
 .smart-green .button:hover {
     background-color:#80A24A;
 }
 
 /*######## Table ########*/
-table
-{
+
+.tableau {
+    margin-left:auto;
+    margin-right:auto;
+
+    max-width: 500px;
+    background: #F8F8F8;
+    padding: 30px 30px 20px 30px;
+    font: 12px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #666;
+    box-shadow: 10px 10px 5px #888888;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+.tableau caption {
+    font-size: 24px;
+    text-align: left;
+    padding: 10px 0px 10px 40px;
+    margin: -60px -30px 10px -30px;
+    color: #FFF;
+    background: #9DC45F;
+    text-shadow: 1px 1px 1px #949494;
+    border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    border-bottom:1px solid #89AF4C;}
+
+.tableau table{
     border-collapse: collapse;
+    border-spacing: 0;
+    width:100%;
+    height:100%;
+    margin:0px;padding:0px;}
+
+.tableau tr:last-child td:last-child {
+    -moz-border-radius-bottomright:5px;
+    -webkit-border-bottom-right-radius:5px;
+    border-bottom-right-radius:5px;}
+
+.tableau table tr:first-child td:first-child {
+    -moz-border-radius-topleft:5px;
+    -webkit-border-top-left-radius:5px;
+    border-top-left-radius:5px;}
+
+.tableau table tr:first-child td:last-child {
+    -moz-border-radius-topright:5px;
+    -webkit-border-top-right-radius:5px;
+    border-top-right-radius:5px;}
+
+.tableau tr:last-child td:first-child{
+    -moz-border-radius-bottomleft:5px;
+    -webkit-border-bottom-left-radius:5px;
+    border-bottom-left-radius:5px;}
+
+.tableau tr:hover td{}
+
+.tableau tr:nth-child(odd){ background-color:#9DC45F; }
+
+.tableau tr:nth-child(even)    { background-color:#ffffff; }.tableau td{
+    vertical-align:middle;
+    border:1px solid #6E8942;
+    border-width:0px 1px 1px 0px;
+    text-align:center;
+    padding:3px;
+    font-size: 10px;
+    color:#000000;}
+
+.tableau tr:last-child td{
+    border-width:0px 1px 0px 0px;}
+
+.tableau tr td:last-child{
+    border-width:0px 0px 1px 0px;}
+
+.tableau tr:last-child td:last-child{
+    border-width:0px 0px 0px 0px;}
+
+.tableau tr:first-child td{
+    background:-o-linear-gradient(bottom, #9DC45F 5%, #6E8942 100%);    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #9DC45F), color-stop(1, #6E8942) );
+    background:-moz-linear-gradient( center top, #9DC45F 5%, #6E8942 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#9DC45F", endColorstr="#6E8942");  background: -o-linear-gradient(top,#9DC45F,6E8942);
+    background-color:#6E8942;
+    border:0px solid #6E8942;
+    text-align:center;
+    border-width:0px 0px 1px 1px;
+    font-size: 14px;
+    color:#ffffff;
 }
-td, th /* Mettre une bordure sur les td ET les th */
-{
-    border: 1px solid black;
-}
+
+.tableau tr:first-child:hover td{
+    background:-o-linear-gradient(bottom, #9DC45F 5%, #6E8942 100%);    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #9DC45F), color-stop(1, #6E8942) );
+    background:-moz-linear-gradient( center top, #9DC45F 5%, #6E8942 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#9DC45F", endColorstr="#6E8942");  background: -o-linear-gradient(top,#9DC45F,6E8942);
+    background-color:#6E8942;}
+
+.tableau tr:first-child td:first-child{
+    border-width:0px 0px 1px 0px;}
+
+.tableau tr:first-child td:last-child{
+    border-width:0px 0px 1px 1px;}
