@@ -6,3 +6,8 @@ if (!isset($_GET['section']) OR $_GET['section'] == 'index')
 {
     include_once('controleur/referentiel/index.php');
 }
+
+if ($_GET['section'] == 'detail')
+{
+	include_once('controleur/referentiel/detail.php');
+}
