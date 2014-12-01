@@ -2,14 +2,16 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Détail de </title>
+        <title>Détail de "<?php echo $chant['titre']; ?>"</title>
 	<link href="vue/referentiel/style.css" rel="stylesheet" /> 
     </head>
         
     <body>
-        <h1>Listing des chants du référentiel</h1>
- 
-        <div class="chants" >
+        <div class="chants">
+
+        <h1>Détail de "<?php echo $chant['titre']; ?>"</h1>
+
+        <p>Référence : <?php echo $chant['reference']; ?></p>
             <table >
                 <tr>
                     <td>Référence</td>
