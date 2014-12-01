@@ -15,7 +15,7 @@ function get_simpleChant($id)
     $req->execute();
 
     // La variables $chants recueille le résultat
-    $chant = $req->fetchAll();
-    
+    $chant = $req->fetch();
+        
     return $chant;
 }

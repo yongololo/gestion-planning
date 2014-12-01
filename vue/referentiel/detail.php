@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Listing des chants</title>
+        <title>Détail de </title>
 	<link href="vue/referentiel/style.css" rel="stylesheet" /> 
     </head>
         
