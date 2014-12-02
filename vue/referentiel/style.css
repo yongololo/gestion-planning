@@ -63,11 +63,14 @@
 	font-family:Comic Sans MS;
 	font-weight:normal;
 	color:#000000;
-}.chants tr:last-child td{
+}
+.chants tr:last-child td{
 	border-width:0px 1px 0px 0px;
-}.chants tr td:last-child{
+}
+.chants tr td:last-child{
 	border-width:0px 0px 1px 0px;
-}.chants tr:last-child td:last-child{
+}
+.chants tr:last-child td:last-child{
 	border-width:0px 0px 0px 0px;
 }
 .chants tr:first-child td{
