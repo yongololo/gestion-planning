@@ -6,9 +6,7 @@
 	<link href="vue/referentiel/style.css" rel="stylesheet" /> 
     </head>
         
-    <body>
-        <h1>Listing des chants du référentiel</h1>
- 
+    <body> 
         <div class="chants" >
             <table >
                 <tr>

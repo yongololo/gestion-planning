@@ -1,3 +1,146 @@
+/*
+GRE - 2014
+*/
+
+/*Body global*/
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color:#333
+}
+
+/*Mise en place des wrappers*/
+#wrapper {
+    width: 100%;
+    min-width: 800px;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+/*En-tête*/
+#headerwrap {
+    width: 100%;
+    float: left;
+    margin: 0 auto;
+}
+
+#header {
+    height: 75px;
+    margin: 5px;
+    padding-top: 10px;
+
+    background:-o-linear-gradient(bottom, #5fbf00 5%, #3f7f00 100%);	
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #5fbf00), color-stop(1, #3f7f00) );
+	background:-moz-linear-gradient( center top, #5fbf00 5%, #3f7f00 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#5fbf00", endColorstr="#3f7f00");	
+	background: -o-linear-gradient(top,#5fbf00,#3f7f00);
+	background-color:#5fbf00;
+	border:0px solid #3f7f00;
+	border-width:0px 0px 1px 1px;
+	font-size:14px;
+	font-weight:bold;
+	color:#ffffff;
+
+	-moz-border-radius-bottomleft:15px;
+	-webkit-border-bottom-left-radius:15px;
+	border-bottom-left-radius:15px;
+	-moz-border-radius-bottomright:15px;
+	-webkit-border-bottom-right-radius:15px;
+	border-bottom-right-radius:15px;
+	-moz-border-radius-topright:15px;
+	-webkit-border-top-right-radius:15px;
+	border-top-right-radius:15px;
+	-moz-border-radius-topleft:15px;
+	-webkit-border-top-left-radius:15px;
+	border-top-left-radius:15px;
+}
+
+#header h1 {
+	text-align: center;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+#header p {
+	text-align: right;
+	font-size: 12px;
+	font-style: italic;
+	padding-right: 10px;
+}
+
+/*Partie concernant le contenu*/
+#contentliquid {
+    float: left;
+    width: 100%;
+}
+
+#contentwrap {
+    margin-left: 150px;
+    float: left;
+}
+
+#content {
+    border-radius: 10px;
+    border: 1px solid #ebebeb;
+    margin: 5px;
+}
+
+/*Menu de gauche*/
+#leftcolumnwrap {
+    width: 150px;
+    margin-left: -100%;
+    float: left;
+}
+
+#leftcolumn {
+	font-size:12px;
+	font-weight:bold;
+	color:#ffffff;
+    border-radius: 10px;
+    margin: 5px;
+    padding-top: 5px;
+    padding-left: 10px;
+
+    background:-o-linear-gradient(bottom, #5fbf00 5%, #3f7f00 100%);	
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #5fbf00), color-stop(1, #3f7f00) );
+	background:-moz-linear-gradient( center top, #5fbf00 5%, #3f7f00 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#5fbf00", endColorstr="#3f7f00");	
+	background: -o-linear-gradient(top,#5fbf00,#3f7f00);
+	background-color:#5fbf00;
+	border:0px solid #3f7f00;
+	border-width:0px 0px 1px 1px;
+
+	-moz-border-radius-bottomleft:7px;
+	-webkit-border-bottom-left-radius:7px;
+	border-bottom-left-radius:7px;
+	-moz-border-radius-bottomright:7px;
+	-webkit-border-bottom-right-radius:7px;
+	border-bottom-right-radius:7px;
+	-moz-border-radius-topright:7px;
+	-webkit-border-top-right-radius:7px;
+	border-top-right-radius:7px;
+	-moz-border-radius-topleft:7px;
+	-webkit-border-top-left-radius:7px;
+	border-top-left-radius:7px;
+}
+
+/*Pied de page*/
+#footerwrap {
+    width: 100%;
+    float: left;
+    margin: 0 auto;
+    clear: both;
+}
+
+#footer {
+    height: 40px;
+    background: #33FF66;
+    border-radius: 10px;
+    border: 1px solid #1feb52;
+    margin: 5px;
+}
+
+/*Page des chants*/
 .chants {
 	margin:0px;padding:0px;
 	width:100%;
@@ -51,16 +194,15 @@
 	
 }
 .chants tr:nth-child(odd){ background-color:#d4ffaa; }
-.chants tr:nth-child(even)    { background-color:#ffffff; }.chants td{
+.chants tr:nth-child(even)    
+{ 
+	background-color:#ffffff; }.chants td{
 	vertical-align:middle;
-	
-	
 	border:1px solid #3f7f00;
 	border-width:0px 1px 1px 0px;
 	text-align:left;
 	padding:5px;
 	font-size:12px;
-	font-family:Comic Sans MS;
 	font-weight:normal;
 	color:#000000;
 }
@@ -74,24 +216,26 @@
 	border-width:0px 0px 0px 0px;
 }
 .chants tr:first-child td{
-		background:-o-linear-gradient(bottom, #5fbf00 5%, #3f7f00 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #5fbf00), color-stop(1, #3f7f00) );
+	background:-o-linear-gradient(bottom, #5fbf00 5%, #3f7f00 100%);	
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #5fbf00), color-stop(1, #3f7f00) );
 	background:-moz-linear-gradient( center top, #5fbf00 5%, #3f7f00 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#5fbf00", endColorstr="#3f7f00");	background: -o-linear-gradient(top,#5fbf00,3f7f00);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#5fbf00", endColorstr="#3f7f00");	
+	background: -o-linear-gradient(top,#5fbf00,3f7f00);
 
 	background-color:#5fbf00;
 	border:0px solid #3f7f00;
 	text-align:center;
 	border-width:0px 0px 1px 1px;
 	font-size:14px;
-	font-family:Comic Sans MS;
 	font-weight:bold;
 	color:#ffffff;
 }
 .chants tr:first-child:hover td{
-	background:-o-linear-gradient(bottom, #5fbf00 5%, #3f7f00 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #5fbf00), color-stop(1, #3f7f00) );
+	background:-o-linear-gradient(bottom, #5fbf00 5%, #3f7f00 100%);
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #5fbf00), color-stop(1, #3f7f00) );
 	background:-moz-linear-gradient( center top, #5fbf00 5%, #3f7f00 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#5fbf00", endColorstr="#3f7f00");	background: -o-linear-gradient(top,#5fbf00,3f7f00);
-
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#5fbf00", endColorstr="#3f7f00");
+	background: -o-linear-gradient(top,#5fbf00,3f7f00);
 	background-color:#5fbf00;
 }
 .chants tr:first-child td:first-child{
