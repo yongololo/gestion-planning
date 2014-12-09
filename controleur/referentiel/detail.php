@@ -17,5 +17,10 @@ $chant['ton'] = htmlspecialchars($chant['ton']);
 $chant['tempo'] = htmlspecialchars($chant['tempo']);
 $chant['status'] = htmlspecialchars($chant['status']);
 
+if (empty($chant['arrangement']))
+{
+	$chant['arrangement'] = "Aucun";
+}
+
 // On affiche la page (vue)
 include_once('vue/referentiel/detail.php');
