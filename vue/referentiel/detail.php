@@ -1,44 +1,15 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Détail de "<?php echo $chant['titre']; ?>"</title>
-	<link href="vue/referentiel/style.css" rel="stylesheet" /> 
-    </head>
-        
-    <body>
-        <div class="chants">
+<div class="chants">
 
-        <h1>Détail de "<?php echo $chant['titre']; ?>"</h1>
+    <h1>Détail de "<?php echo $chant['titre']; ?>" 
+        <?php if (!empty($chant['original'])) {echo "(" . $chant['original'] . ")";} ?></h1>
 
-        <p>Référence : <?php echo $chant['reference']; ?></p>
-            <table >
-                <tr>
-                    <td>Référence</td>
-                    <td>Titre</td>
-                    <td>Titre original</td>
-                    <td>Auteurs</td>
-                    <td>Arrgt</td>
-                    <td>Ton / Tempo</td>
-                    <td>Actions</td>
-                </tr>
+    <p>Référence : <?php echo $chant['reference']; ?><br>
+    Auteur : <?php echo $chant['auteurs']; ?><br>
+    Arrangement : <?php echo $chant['arrangement']; ?><br>
+    Ton : <?php echo $chant['ton']; ?><br>
+    Tempo : <?php echo $chant['tempo']; ?><br>
+    Lien : <a href="http://<?php echo $chant['lien']; ?>"><?php echo $chant['lien']; ?></a>
+    </p>
+</div>
 
-                <?php foreach($chants as $chant) { ?>
-
-                <tr>
-                    <td><?php echo $chant['reference']; ?></td>
-                    <td><?php echo $chant['titre']; ?></td>
-                    <td><?php echo $chant['original']; ?></td>
-                    <td><?php echo $chant['auteurs']; ?></td>
-                    <td><?php echo $chant['arrangement']; ?></td>
-                    <td><?php echo $chant['ton'] . ' / ' . $chant['tempo']; ?></td>
-                    <td><a href="referentiel.php?section=detail&id=<?php echo $chant['id']; ?>">détail</a></td>
-                </tr>
-
-                <?php } ?>
-
-            </table>
-        </div>
-
-</body>
-</html>
+<p><a href="index.php" class="btn">Retour</a></p>

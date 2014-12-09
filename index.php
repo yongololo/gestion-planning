@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8" />
+    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Portail des musiciens</title>
 	<link href="vue/referentiel/style.css" rel="stylesheet" /> 
     </head>
@@ -25,10 +25,12 @@
 							{
 							    include_once('controleur/referentiel/index.php');
 							}
-
-							if ($_GET['section'] == 'detail')
+							elseif ($_GET['section'] == 'detail')
 							{
 								include_once('controleur/referentiel/detail.php');
+							}
+							elseif ($_GET['section'] == 'ajouter') {
+								include_once('controleur/referentiel/ajouter.php');
 							}
 						?>
 					</div>
@@ -51,38 +53,3 @@
 
     </body>
 </html>
-
-<!--
-
-	<body>
-	    <div id="wrapper">
-
-	        <div id="headerwrap">
-		        <div id="header">
-		            <p>This is the Header</p>
-		        </div>
-	        </div>
-
-	        <div id="contentliquid">
-	        	<div id="contentwrap">
-	        		<div id="content">
-	           			<p> rquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. </p>        
-	       			</div>
-	        	</div>
-	        </div>
-	        
-	        <div id="leftcolumnwrap">
-	        	<div id="leftcolumn">
-	            	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
-	        	</div>
-	        </div>
-
-	        <div id="footerwrap">
-	        	<div id="footer">
-	            	<p>This is the Footer</p>
-	        	</div>
-	        </div>
-	    </div>
-	</body>
-</html>
--->
