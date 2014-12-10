@@ -1,9 +1,12 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
     	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Portail des musiciens</title>
-	<link href="vue/referentiel/style.css" rel="stylesheet" /> 
+    	<title>Portail des musiciens</title>
+		<link href="vue/referentiel/style.css" rel="stylesheet" /> 
     </head>
 
     <body>
@@ -13,6 +16,10 @@
     				<h1>Portail des musiciens</h1>
     				<p>Voisins le Bretonneux</p>
     			</div>
+    			<p>
+    				<a href="controleur/connexion.php">Connexion</a> -
+    				<a href="controleur/inscription.php">Inscription</a>
+    			</p>
         	</div>
 
 	        <div id="contentliquid">
